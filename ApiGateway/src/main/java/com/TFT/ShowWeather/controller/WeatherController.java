@@ -22,38 +22,27 @@ public class WeatherController {
     ShowWeatherDelegate delegate;
 
 
-    /*@RequestMapping(method = RequestMethod.GET, value = "/weatherDetails")
-    public String getWeather()
-    {
-        System.out.println("Getting weathers details");
-
-        String response = restTemplate.exchange("http://localhost:8011/",
-                HttpMethod.GET, null, new ParameterizedTypeReference<String>() {}).getBody();
-
-        System.out.println("Response Body " + response);
-
-        return "Weathers [ Weather Details " + response+" ]";
-    }*/
 
     @RequestMapping(value = "/city/{city_name}", method = RequestMethod.GET)
     public String getWeathersByCity(@PathVariable String city_name)
     {
         System.out.println("Going to call weather service to get data!");
-        return delegate.callStudentServiceAndGetData(city_name);
+        return delegate.getWeatherByCity(city_name);
     }
 
-   /*@RequestMapping(value = "weatherDetails/zipcode/{zipcode}", method = RequestMethod.GET)
-    @HystrixCommand(fallbackMethod = "fallbackMethod")
-    public String getWeathersByZipcode(@PathVariable String zipcode)
+    @RequestMapping(value = "/allWeather", method = RequestMethod.GET)
+    public String getWeathers()
     {
-        System.out.println("Getting Weather details for city zipcode" + zipcode);
+        System.out.println("Going to call weather service to get data!");
+        return delegate.getWeather();
+    }
 
-        String response = restTemplate.exchange("http://localhost:8011/zip/{zip}",
-                HttpMethod.GET, null, new ParameterizedTypeReference<String>() {}, zipcode).getBody();
+    @RequestMapping(value = "/zip/{zipcode}", method = RequestMethod.GET)
+    public String getWeathersByZipCode(String zipcode)
+    {
+        System.out.println("Going to call weather service to get data!");
+        return delegate.getWeatherByZipcode(zipcode);
+    }
 
-        System.out.println("Response Body " + response);
 
-        return "Zipcode of the city  -  " + zipcode + " [ Weather Details " + response + " ]";
-    }*/
-    
 }
