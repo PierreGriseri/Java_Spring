@@ -15,7 +15,7 @@ eureka:
 
 spring:
   application:
-    name: api-gateway
+    name: weather-gateway
 
 management:
   security:
