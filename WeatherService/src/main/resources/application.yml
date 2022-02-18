@@ -15,7 +15,7 @@ eureka:
 
 spring:
   application:
-    name: singer-service
+    name: weather-service
 
 management:
   security:

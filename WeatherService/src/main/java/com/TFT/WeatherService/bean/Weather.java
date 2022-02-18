@@ -54,11 +54,11 @@ public class Weather {
 
 
     public String toString() {
-        return "Singer{" +
+        return "Singer{\n" +
                 "Nom de la ville=" + city_name +
-                ", Code postal ='" + zipcode + '\'' +
-                ", Pays ='" + countryCode + '\'' +
-                ", Temps extérieur='" + weather + '\'' +
+                ", Code postal ='" + zipcode + "\n" +
+                ", Pays ='" + countryCode + "\n" +
+                ", Temps extérieur='" + weather + "\n" +
                 '}';
     }
 }

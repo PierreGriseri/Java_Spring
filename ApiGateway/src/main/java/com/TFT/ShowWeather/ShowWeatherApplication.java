@@ -1,4 +1,4 @@
-package com.TFT.ApiGateway;
+package com.TFT.ShowWeather;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,8 +10,8 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @EnableEurekaClient
 @EnableHystrixDashboard
 @EnableCircuitBreaker
-public class ApiGatewayApplication {
+public class ShowWeatherApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(ApiGatewayApplication.class, args);
+		SpringApplication.run(ShowWeatherApplication.class, args);
 	}
 }

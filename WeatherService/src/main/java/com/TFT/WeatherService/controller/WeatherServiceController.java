@@ -27,12 +27,12 @@ public class WeatherServiceController {
         }
     };
 
-    /*@ApiOperation(value = "Get list of weather with the city, zipcode and coutry", response = Iterable.class, tags = "getWeather")
+    @ApiOperation(value = "Get list of weather with the city, zipcode and coutry", response = Iterable.class, tags = "getWeather")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Suceess|OK"),
             @ApiResponse(code = 401, message = "not authorized!"),
             @ApiResponse(code = 403, message = "forbidden!!!"),
-            @ApiResponse(code = 404, message = "not found!!!")})*/
+            @ApiResponse(code = 404, message = "not found!!!")})
     @RequestMapping(
             name = "getWeather",
             method = RequestMethod.GET
@@ -46,7 +46,7 @@ public class WeatherServiceController {
         }
     }
 
-    //@ApiOperation(value = "Get specific weather depending on the city name ", response = Weather.class, tags = "getWeatherByCity")
+    @ApiOperation(value = "Get specific weather depending on the city name ", response = Weather.class, tags = "getWeatherByCity")
     @RequestMapping(
             name = "getWeatherByCity",
             method = RequestMethod.GET,

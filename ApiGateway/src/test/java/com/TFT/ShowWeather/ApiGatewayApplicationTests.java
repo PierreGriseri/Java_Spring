@@ -1,4 +1,4 @@
-package com.TFT.ApiGateway;
+package com.TFT.ShowWeather;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
